@@ -1,5 +1,6 @@
 import re
 
+
 def remove_tags(text):
     TAG_RE = re.compile(r'<[^>]+>')
     return TAG_RE.sub('', text)
@@ -25,9 +26,11 @@ def getName(txt):
     if m:
         txt = remove_tags(txt)
         index = txt.index("From:")
-        txt = txt[index:index+40]
+        txt = txt[index:index + 40]
         firstName = txt.split(" ")[1]
+        firstName = firstName.replace("&quot;", "").replace("&lt;", "").replace("&gt;", "")
         lastName = txt.split(" ")[2]
+        lastName = lastName.replace("&quot;", "").replace("&lt;", "").replace("&gt;", "")
         # print(txt)
         return firstName, lastName
     else:

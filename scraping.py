@@ -79,7 +79,7 @@ if __name__ == '__main__':
         html_page = main_page + 'msg' + '{:05d}'.format(msg) + '.html'
         firstName, lastName, gender, lines = getPayload(html_page)
         data.append({'name': firstName + " " + lastName, 'gender': d.get_gender(firstName), 'text': lines})
-    with open(filename + '1' + '.py', 'w') as outfile:
+    with open(filename + '1' + '.json', 'w') as outfile:
         json.dump(data, outfile, indent=4)
     data.clear()
 
@@ -88,7 +88,7 @@ if __name__ == '__main__':
         html_page = main_page + 'msg' + '{:05d}'.format(msg) + '.html'
         firstName, lastName, gender, lines = getPayload(html_page)
         data.append({'name': firstName + " " + lastName, 'gender': d.get_gender(firstName), 'text': lines})
-    with open(filename + '2' + '.py', 'w') as outfile:
+    with open(filename + '2' + '.json', 'w') as outfile:
         json.dump(data, outfile, indent=4)
     data.clear()
 
@@ -97,7 +97,7 @@ if __name__ == '__main__':
         html_page = main_page + 'msg' + '{:05d}'.format(msg) + '.html'
         firstName, lastName, gender, lines = getPayload(html_page)
         data.append({'name': firstName + " " + lastName, 'gender': d.get_gender(firstName), 'text': lines})
-    with open(filename + '3' + '.py', 'w') as outfile:
+    with open(filename + '3' + '.json', 'w') as outfile:
         json.dump(data, outfile, indent=4)
     data.clear()
 
@@ -106,7 +106,7 @@ if __name__ == '__main__':
         html_page = main_page + 'msg' + '{:05d}'.format(msg) + '.html'
         firstName, lastName, gender, lines = getPayload(html_page)
         data.append({'name': firstName + " " + lastName, 'gender': d.get_gender(firstName), 'text': lines})
-    with open(filename + '4' + '.py', 'w') as outfile:
+    with open(filename + '4' + '.json', 'w') as outfile:
         json.dump(data, outfile, indent=4)
     data.clear()
 
@@ -115,9 +115,9 @@ if __name__ == '__main__':
         html_page = main_page + 'msg' + '{:05d}'.format(msg) + '.html'
         firstName, lastName, gender, lines = getPayload(html_page)
         data.append({'name': firstName + " " + lastName, 'gender': d.get_gender(firstName), 'text': lines})
-    with open(filename + '5' + '.py', 'w') as outfile:
+    with open(filename + '5' + '.json', 'w') as outfile:
         json.dump(data, outfile, indent=4)
-
+    data.clear()
 # for checking only one msg
 # html_page = main_page + 'msg' + '04961' + '.html'
 # getPayload(html_page)
